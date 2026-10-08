@@ -41,9 +41,9 @@ fun obtenerTipoNullable(): String {
 }
 
 fun obtenerTipoUnit(): String {
-    TODO("Retornar el nombre del tipo de una funcion que no retorna nada")
+    return "Unit"
 }
 
 fun obtenerTipoNothing(): String {
-    TODO("Retornar el nombre del tipo de una funcion que lanza una excepcion")
+    return "Nothing"
 }
