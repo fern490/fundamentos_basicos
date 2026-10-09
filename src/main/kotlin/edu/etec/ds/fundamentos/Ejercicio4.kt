@@ -9,7 +9,13 @@ fun evaluarPositivo(numero: Int): String {
 }
 
 fun clasificarNumero(numero: Int): String {
-    TODO("Clasificar: Mayor a 10, Menor a 10, o Igual a 10")
+    if (numero > 10) {
+        return "Mayor a 10"
+    } else if (numero < 10) {
+        return "Menor a 10"
+    } else {
+        return "Igual a 10"
+    }
 }
 
 fun evaluarEdad(edad: Int): String {
