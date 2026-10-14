@@ -9,16 +9,34 @@ fun sumarHasta(n: Int): Int {
 }
 
 fun contarPares(inicio: Int, fin: Int): Int {
-    TODO("Contar numeros pares en el rango [inicio, fin]")
-    
+    return (inicio..fin).count()
+}
+
+fun llegueHastaElNEsimoElementoDeFibonacci(contador: Int, n: Int): Boolean {
+    return contador > n
 }
 
 fun fibonacci(n: Int): Int {
+    var primero = 0
+    var segundo = 1
+    var resultado = primero + segundo
+    var contador = 2
+    while (!llegueHastaElNEsimoElementoDeFibonacci(contador, n)) {
+        resultado = primero + segundo
+        primero = segundo
+        segundo = resultado
+        contador++
+    }
+    return resultado
     TODO("Retornar el n-esimo numero de Fibonacci")
 }
 
 fun factorial(n: Int): Int {
-    TODO("Calcular el factorial de n")
+    var resultado = 1
+    for (i in n..1) {
+        resultado *= i
+    }
+    return resultado
 }
 
 fun encontrarMaximo(numeros: List<Int>): Int {
