@@ -33,36 +33,63 @@ fun fibonacci(n: Int): Int {
 
 fun factorial(n: Int): Int {
     var resultado = 1
-    for (i in n..1) {
+    for (i in n downTo 1) {
         resultado *= i
     }
     return resultado
 }
 
 fun encontrarMaximo(numeros: List<Int>): Int {
-    TODO("Encontrar el valor maximo en la lista")
+    var maximo = numeros[0]
+    for (numero in numeros) {
+        if (numero > maximo) {
+            maximo = numero
+        }
+    }
+    return maximo
 }
 
 fun encontrarMinimo(numeros: List<Int>): Int {
-    TODO("Encontrar el valor minimo en la lista")
+    var minimo = numeros[0]
+    for (numero in numeros) {
+        if (numero < minimo) {
+            minimo = numero
+        }
+    }
+    return minimo
 }
 
 fun sumarLista(numeros: List<Int>): Int {
-    TODO("Sumar todos los elementos de la lista")
+    var suma = 0
+    for (numero in numeros) {
+        suma += numero
+    }
+    return suma
 }
 
 fun inverter(texto: String): String {
-    TODO("Invertir la cadena de texto")
+    return texto.reversed()
 }
 
 fun contarVocales(texto: String): Int {
-    TODO("Contar las vocales en el texto (considerar mayusculas y minusculas)")
+    var contador = 0
+    for (letra in texto.lowercase()) {
+        if (letra in "aeiou") {
+            contador++
+        }
+    }
+    return contador
 }
 
 fun esPalindromo(texto: String): Boolean {
-    TODO("Verificar si el texto es un palindromo (ignorando espacios)")
+    val textoLimpio = texto.replace(" ", "").lowercase()
+    return textoLimpio == textoLimpio.reversed()
 }
 
 fun tablaMultiplicar(numero: Int): List<Int> {
-    TODO("Retornar lista con la tabla de multiplicar del 1 al 10")
+    val lista = mutableListOf<Int>()
+    for (i in 1..10) {
+        lista.add(numero * i)
+    }
+    return lista
 }
